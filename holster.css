@@ -1,62 +1,150 @@
 .holster {
-  width: 100%;
-  display: block;
-  height: 20px;
-  margin-bottom: 10px;
+    width: 100%;
+    display: block;
+    height: 20px;
+    margin-bottom: 10px;
+    animation: loading_animation 3s infinite linear; 
 }
 
 /* Type */
 .holster.title {
-  height: 30px;
-  margin-bottom: 10px;
+    height: 30px;
+    margin-bottom: 10px;
 }
 
 .holster.h-1 {
-  height: 24px;
-  margin-bottom: 10px;
+    height: 24px;
+    margin-bottom: 10px;
 }
 
 .holster.h-2 {
-  height: 20px;
-  margin-bottom: 10px;
+    height: 20px;
+    margin-bottom: 10px;
 }
 
 .holster.h-3 {
-  height: 18px;
-  margin-bottom: 10px;
+    height: 18px;
+    margin-bottom: 10px;
 }
 
 .holster.paragraph {
-  height: 16px;
-  margin-bottom: 10px;
+    height: 16px;
+    margin-bottom: 10px;
 }
 
 .holster.small {
-  height: 10px;
-  margin-bottom: 10px;
+    height: 10px;
+    margin-bottom: 10px;
 }
 
 /* mod */
 .holster.half {
-  width: 50%;
+    width: 50%;
 }
 
 .holster.end {
-  width: 70%;
+    width: 70%;
 }
 
 /* color */
 .holster.light {
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.24);
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.24);
 }
 
 .holster.grey {
-  background-color: #aaa;
-  background-color: rgba(160, 160, 160, 0.24);
+    background-color: #aaa;
+    background-color: rgba(160, 160, 160, 0.24);
 }
 
 .holster.dark {
-  background-color: #555;
-  background-color: rgba(75, 75, 75, 0.24);
+    background-color: #555;
+    background-color: rgba(75, 75, 75, 0.24);
 }
+
+/* speed */
+.holster.slow {
+    animation: loading_animation 8s infinite linear; 
+}
+
+.holster.normal {
+    animation: loading_animation 5s infinite linear; 
+}
+
+.holster.fast {
+    animation: loading_animation 3s infinite linear; 
+}
+
+.holster.extra-fast {
+    animation: loading_animation 1s infinite linear; 
+}
+
+
+
+/* Image */
+.holster.image{
+    position: relative;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    padding-bottom: 77.16%;
+    background-color: #555;
+    background-color: rgba(75, 75, 75, 0.24);
+}
+
+.holster.image.ratio-1-1{
+    padding-bottom: 100%;
+}
+
+.holster.image.ratio-5-4{
+    padding-bottom: 80%;
+}
+
+.holster.image.ratio-4-3{
+    padding-bottom: 75%;
+}
+
+.holster.image.ratio-3-2{
+    padding-bottom: 66.6666667%;
+}
+
+.holster.image.ratio-5-3{
+    padding-bottom: 60%;
+}
+
+.holster.image.ratio-16-9{
+    padding-bottom: 56.25%;
+}
+
+
+.holster.image > div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 2%;
+}
+
+
+@-webkit-keyframes loading_animation {
+    from {
+        box-shadow: inset 0 0 0 rgba(255, 255, 255, .5)
+    }
+    to {
+        box-shadow: inset 50vw 0 0 rgba(255, 255, 255, .0)
+    }
+}
+@keyframes loading_animation {
+    from {
+        box-shadow: inset 0 0 0 rgba(255, 255, 255, .5)
+    }
+    to {
+        box-shadow: inset 50vw 0 0 rgba(255, 255, 255, .0)
+    }
+}
+
+
+

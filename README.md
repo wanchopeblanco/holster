@@ -1,5 +1,7 @@
 # Holster
-Easy placeholder templates in MeteorJS for Blaze inspired by facebooks loading pattern
+Easy placeholder templates in MeteorJS for Blaze inspired by facebooks loading pattern.
+
+## Fork of [pushplaybang:holster](https://github.com/Pushplaybang/holster)
 
 While your templates fetching data, use this package to add a low-fi placeholder, or as a drop-in for prototype layouts.  
 
@@ -11,7 +13,7 @@ While your templates fetching data, use this package to add a low-fi placeholder
 Simple install the package via atmosphere
 
 ```sh
-meteor add pushplaybang:holster
+meteor add indesign:holster
 ```
 
 
@@ -20,37 +22,38 @@ meteor add pushplaybang:holster
 ## Templates
 There are a few templates to choose from, with relatively simple options,  Each determines the number of lines the placeholder text blocks contains.
 
+ * holsterImage
  * holsterSingle
  * holsterDouble
  * holsterTripple
  * holsterQuad
 
-each takes three parameters, heres an example:
+each takes four parameters, heres an example:
 
 ```html
-{{> holsterSingle type="title" mod="none" color="grey" }}
+{{> holsterSingle type="title" mod="none" color="grey" speed=""}}
 ```
 
 * **type**  - title, h-1, h-2, h-3, paragraph, small
 * **mod** - none, half, end
 * **color** - light, grey, dark
+* **speed** - slow, normal, fast, extra-fast
 
 ## Example
-I usually return the ready state of the template level subscription through my helpers, and then use it in the template to show these while I'm fetching data.
+Return the ready state of the template level subscription through helpers, and then use it in the template to show these while I'm fetching data.
 
 ````html
 <h2>
-  {{#unless ready}}
-    {{> holsterDouble type="h-2" mod="none" color="light" }}
-  {{else}}
-    {{ title }}
-  {{/unless}}
+  	{{#unless ready}}
+    	{{> holsterDouble type="h-2" mod="none" color="light" }}
+  	{{else}}
+    	{{ title }}
+  	{{/unless}}
 </h2>
 ````
 
 
 ### TODO
-* image holster
 * Form holster
 * list holster
 * possibly convert to svg
